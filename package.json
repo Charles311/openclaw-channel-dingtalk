@@ -1,6 +1,6 @@
 {
   "name": "openclaw-channel-dingtalk",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "type": "module",
   "description": "钉钉 Stream 机器人 Channel 插件 for OpenClaw - 支持 Markdown、ActionCard 和双向通信",
   "main": "dist/index.js",
