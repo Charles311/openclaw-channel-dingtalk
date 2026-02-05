@@ -1,0 +1,61 @@
+{
+    "id": "dingtalk",
+    "name": "钉钉机器人 Channel",
+    "version": "2.2.0",
+    "description": "钉钉群机器人 Channel 插件 for OpenClaw",
+    "channels": [
+        "dingtalk"
+    ],
+    "configSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+            "accounts": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                        "enabled": {
+                            "type": "boolean",
+                            "default": true
+                        },
+                        "clientId": {
+                            "type": "string",
+                            "description": "钉钉应用的 AppKey"
+                        },
+                        "clientSecret": {
+                            "type": "string",
+                            "description": "钉钉应用的 AppSecret"
+                        },
+                        "robotCode": {
+                            "type": "string",
+                            "description": "机器人的 robotCode"
+                        }
+                    },
+                    "required": [
+                        "clientId",
+                        "clientSecret"
+                    ]
+                }
+            }
+        }
+    },
+    "uiHints": {
+        "accounts": {
+            "label": "账号配置"
+        },
+        "accounts.*.enabled": {
+            "label": "启用"
+        },
+        "accounts.*.clientId": {
+            "label": "ClientId (AppKey)"
+        },
+        "accounts.*.clientSecret": {
+            "label": "ClientSecret (AppSecret)",
+            "sensitive": true
+        },
+        "accounts.*.robotCode": {
+            "label": "机器人编码 (robotCode)"
+        }
+    }
+}

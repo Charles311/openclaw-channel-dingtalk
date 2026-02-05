@@ -1,0 +1,58 @@
+{
+  "name": "openclaw-channel-dingtalk",
+  "version": "2.2.0",
+  "type": "module",
+  "description": "钉钉 Stream 机器人 Channel 插件 for OpenClaw - 支持 Markdown、ActionCard 和双向通信",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "openclaw": {
+    "extensions": [
+      "./dist/index.js"
+    ]
+  },
+  "keywords": [
+    "openclaw",
+    "openclaw-plugin",
+    "openclaw-channel",
+    "channel",
+    "dingtalk",
+    "钉钉",
+    "stream",
+    "chatbot",
+    "机器人",
+    "markdown",
+    "actioncard"
+  ],
+  "author": "Charles311",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2.0.0"
+  },
+  "dependencies": {
+    "dingtalk-stream": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "openclaw": "latest"
+  }
+}
